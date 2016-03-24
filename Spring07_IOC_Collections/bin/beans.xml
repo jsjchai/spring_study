@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="u" class="com.dao.impl.UserDAOImpl">
+		<property name="sets">
+			<set>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+			</set>
+		</property>
+		<property name="lists">
+			<list>
+				<value>122</value>
+				<value>12211</value>
+				<value>12211</value>
+			</list>
+		</property>
+		<property name="maps">
+			<map>
+				<entry key="id" value="1"></entry>
+				<entry key="name" value="abc"></entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="userService" class="com.service.UserService" scope="prototype">
+	<property name="userdio" ref="u" />
+	</bean>
+
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <!-- 中文乱码问题
+    <constant name="struts.i18n.encoding" value="GBK"></constant> -->
+    <package name="registration" namespace="/" extends="struts-default">  
+        <action name="user" class="com.registration.action.UserAction">
+            <result name="success">/registerSuccess.jsp</result>
+            <result name="fail">/registerFail.jsp</result>
+            <result name="list">/userlist.jsp</result>
+            <result name="load">/user.jsp</result>
+        </action>
+    </package>
+
+
+</struts>

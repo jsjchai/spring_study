@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="u" class="com.dao.impl.UserDAOImpl">
+	</bean>
+	<bean id="userService" class="com.service.UserService">
+	<!--通过setxx方法注入
+		<property name="userdio" ref="u" /> 
+	-->
+	<!-- 通过构造函数注入 -->
+		<constructor-arg>
+			<ref bean="u"/>
+		</constructor-arg>
+	</bean>
+
+</beans>
