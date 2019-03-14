@@ -1,5 +1,6 @@
 package com.service;
 
+import com.dao.UserDao;
 import org.junit.Test;
 
 import com.model.User;
@@ -10,11 +11,11 @@ public class UserServiceTest {
 
 	@Test
 	public void testAdd() throws Exception {
-		BeanFactory bf=new ClassPathXmlApplicationContext();
+		BeanFactory bf = new ClassPathXmlApplicationContext();
 		UserService service =(UserService) bf.getBean("userService");
-//		UserDAO udo=(UserDAO) bf.getBean("u");
-//		service.setUserdio(udo);
-		User u=new User();
+		UserDao dao =(UserDao) bf.getBean("userDao");
+		service.setUserDao(dao);
+		User u = new User();
 		service.add(u);
 	}
 
