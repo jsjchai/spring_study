@@ -5,11 +5,11 @@ import com.spring3.model.User;
 
 public class UserDaoImpl implements UserDao {
 
-	@Override
-	public void sava(User u) {
-		
-		System.out.println("user saved!");
-		
-	}
+    @Override
+    public void sava(User u) {
+
+        System.out.println("user saved!");
+
+    }
 
 }

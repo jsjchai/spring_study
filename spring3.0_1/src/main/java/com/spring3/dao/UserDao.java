@@ -4,5 +4,5 @@ import com.spring3.model.User;
 
 public interface UserDao {
 
-	public void sava(User u);
+    void sava(User u);
 }
